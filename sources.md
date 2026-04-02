@@ -18,7 +18,7 @@ Central configuration for all data sources. Every pipeline reads connection deta
 
 **DAILY_DATA:** Opportunity, Account, Forecast Accuracy, FY2027 Targets, Contract Details
 
-**MARKETING_DATA:** Campaign Members, Campaign, Leads, Contacts, Master Campaign Frontend Data
+**MARKETING_DATA:** Campaign Member, Campaign, Leads, Contacts, Master Campaign Frontend Data
 
 **CS_DATA:** Opportunity, Account, Subskribe Order Line, User
 
@@ -30,7 +30,7 @@ Central configuration for all data sources. Every pipeline reads connection deta
 
 | Alias | Tab | User Column | Canonical Column |
 |-------|-----|-------------|------------------|
-| | | | |
+| CS_DATA | Opportunity | CSM Sourced | CSM Sourced / CSM Created |
 
 ---
 
@@ -70,7 +70,7 @@ Minimum required columns per source and tab. For complete field references, see 
 | Subskribe Order Delta ARR | numeric | yes | Net ARR change |
 | Forecast Category | text | yes | For forecast analysis |
 
-### MARKETING_DATA — Campaign Members
+### MARKETING_DATA — Campaign Member
 
 | Column | Type | Required | Description |
 |--------|------|----------|-------------|
