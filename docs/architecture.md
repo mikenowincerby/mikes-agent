@@ -162,7 +162,7 @@ For meeting transcript ingestion, context recall, and knowledge promotion:
 2. **Agent executes per `codespecs/briefings.md` protocol** — extracts structured data, searches briefing index, or identifies promotion candidates
 3. **For promote:** CoS presents knowledge base candidates for user approval before writing to `knowledge.md`
 
-Agent: `agents/operations/briefings/`. Protocol: `codespecs/briefings.md`. Transcript source: `https://drive.google.com/drive/folders/1ZQ5iCAglMjcQrCJmP5OcejQ0qY2B5GYb`.
+Agent: `agents/operations/briefings/`. Protocol: `codespecs/briefings.md`. Transcript source: `https://drive.google.com/drive/folders/1A9G0sBOJdAK-qafaDymuZhg3frJnakLs`.
 
 ## Framework boundary
 

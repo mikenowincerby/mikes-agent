@@ -18,7 +18,7 @@ Topic-based compaction (grouping briefings by topic instead of by meeting) is de
 ## Source
 
 **Primary:** Meeting transcripts from Otter/Fireflies stored in Google Drive:
-`https://drive.google.com/drive/folders/1ZQ5iCAglMjcQrCJmP5OcejQ0qY2B5GYb`
+`https://drive.google.com/drive/folders/1A9G0sBOJdAK-qafaDymuZhg3frJnakLs`
 
 The architecture supports any source via the `source_type` frontmatter field. No active adapters exist yet for Slack or email — but the file format and ingestion protocol are source-agnostic.
 

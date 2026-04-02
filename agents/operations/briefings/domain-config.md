@@ -38,5 +38,5 @@ Manages the briefing lifecycle: ingesting meeting transcripts into structured br
 
 | Source | Adapter | Params |
 |--------|---------|--------|
-| Google Drive transcripts | gws drive files list | folder: `1ZQ5iCAglMjcQrCJmP5OcejQ0qY2B5GYb`, delta: `last_drive_scan` from state file |
+| Google Drive transcripts | gws drive files list | folder: `1A9G0sBOJdAK-qafaDymuZhg3frJnakLs`, delta: `last_drive_scan` from state file |
 | Session Attachments | local file scan | path: `.context/attachments/`, delta: `ingested_files` from state file |
