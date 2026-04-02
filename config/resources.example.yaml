@@ -1,0 +1,88 @@
+# Google Resource IDs
+#
+# Copy this file to config/resources.yaml and fill in your own IDs.
+# These IDs are currently hardcoded across multiple files in the repo.
+# This file serves as a complete inventory of what needs to be configured.
+#
+# NOTE: This config file is NOT yet wired into the pipelines. You still
+# need to update the IDs in the files listed under each resource.
+# Config centralization (wiring this file into all references) is planned
+# as a future improvement.
+
+# ─────────────────────────────────────────────────────────
+# DATA SOURCE SHEETS (READ-ONLY, refreshed daily from Salesforce)
+# ─────────────────────────────────────────────────────────
+
+daily_data:
+  # Primary Salesforce data — Opportunity, Forecast Accuracy tabs
+  sheet_id: "YOUR_DAILY_DATA_SHEET_ID"
+  tabs:
+    - Opportunity          # Used by: Sales Analytics, Modeling
+    - Forecast Accuracy    # Used by: Sales Analytics (forecast sub-pipeline)
+  referenced_in:
+    - agents/sales-analytics/domain-config.md        # Data Sources, Ingest Config
+    - agents/sales-analytics/1-planner.md
+    - agents/marketing-analytics/domain-config.md    # Cross-reference
+    - agents/marketing-analytics/1-planner.md
+    - agents/customer-success-analytics/domain-config.md
+    - business-logic/sales/data-dictionary.md
+    - business-logic/sales/forecast-data-prep-rules.md
+    - business-logic/marketing/data-dictionary.md
+    - business-logic/models/ops-forecast/spec.md
+    - business-logic/models/ops-forecast/definitions-template.md
+    - business-logic/models/marketing-workbench/spec.md
+    - knowledge.md
+
+marketing_campaign_data:
+  # Marketing source data — Campaign Members, Leads, Contacts tabs
+  sheet_id: "YOUR_MARKETING_DATA_SHEET_ID"
+  tabs:
+    - Campaign Members
+    - Raw Leads
+    - Raw Contacts
+  referenced_in:
+    - agents/marketing-analytics/domain-config.md    # Data Sources, Ingest Config
+    - agents/marketing-analytics/1-planner.md
+    - business-logic/marketing/data-dictionary.md
+    - business-logic/marketing/data-prep-rules.md
+    - business-logic/models/marketing-workbench/spec.md
+    - business-logic/models/marketing-workbench/definitions-template.md
+    - knowledge.md
+
+customer_success_data:
+  # CS source data — Opportunity, Account, Subskribe Order Line tabs
+  sheet_id: "YOUR_CS_DATA_SHEET_ID"
+  tabs:
+    - Opportunity
+    - Account
+    - Subskribe Order Line
+  referenced_in:
+    - agents/customer-success-analytics/domain-config.md  # Data Sources, Ingest Config
+    - business-logic/customer-success/data-dictionary.md
+    - business-logic/customer-success/data-prep-rules.md
+
+# ─────────────────────────────────────────────────────────
+# REFERENCE SHEETS (supplementary data, not primary sources)
+# ─────────────────────────────────────────────────────────
+
+reference_metrics:
+  # Metric models, enriched data, Lookups reference
+  sheet_id: "YOUR_REFERENCE_SHEET_ID"
+  tabs:
+    - PipeGen
+    - Bookings
+    - Opportunity
+    - Map
+    - Lookups
+  referenced_in:
+    - business-logic/sales/data-dictionary.md
+
+# ─────────────────────────────────────────────────────────
+# OUTPUT SHEETS (created by analyses — for reference only)
+# ─────────────────────────────────────────────────────────
+# These are examples of past analysis outputs stored in knowledge.md.
+# New analyses create fresh sheets — you don't need to configure these.
+# They're listed here for completeness.
+
+# example_analysis_outputs:
+#   - sheet_id: "..."   # referenced in knowledge.md
